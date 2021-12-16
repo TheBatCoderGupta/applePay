@@ -69,7 +69,7 @@ self.addEventListener('notificationclick', e => {
         //if (!hadWindowToFocus) clients.openWindow(e.notification.data.url).then(windowClient => windowClient ? windowClient.focus() : null);
         var url = e.notification.body.replace(/['"]+/g, '') ;
         url = url.substring(url.indexOf('ProductDetails.html?productId'), url.length - 1) + "&isPushNotification=1";
-		url = 'https://azudevapt100002.aptifydev.com/UI/' + url;
+		//test
         if (!hadWindowToFocus) clients.openWindow(url || "https://www.youtube.com").then(windowClient => windowClient ? windowClient.focus() : null);
     }));
 });
