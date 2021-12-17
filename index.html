@@ -5,57 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Push Codelab</title>
+    <title>Home</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/eb6.css">
 </head>
 
 <body>
 
-    <header class="ebHeader">
-        <h1>Push Codelab</h1>
-    </header>
+    <nav class="navbar navbar-expand-lg">
+        <span class="navbar-brand hideoniPad">e-Business 6.0</span>
+        <div class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </div>
+        <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Events <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Products <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline mt-2 mt-md-0">
+            <div class="eb-btn-donate-now-wrapper"><a href="#" class="btn btn-secondary eb-btn-donate-now">Become a Member</a></div>
+            <div class="eb-btn-donate-now-wrapper"><a href="#" class="btn btn-secondary eb-btn-donate-now">Donate Now</a></div>
 
-    <main class="ebBody ebWrapper">
-        <p>
-            Welcome to the push messaging codelab. The button below needs to be
-            fixed to support subscribing to push.
-        </p>
-        <p>
-            <button disabled class="js-push-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-                Enable Push Messaging
-            </button>
-        </p>
-        <section class="subscription-details js-subscription-details is-invisible">
-            <p>
-                Once you've subscribed your user, you'd send their subscription to your
-                server to store in a database so that when you want to send a message
-                you can lookup the subscription and send a message to it.
-            </p>
-            <p>
-                To simplify things for this code lab copy the following details
-                into the <a href="https://web-push-codelab.glitch.me//">
-                    Push Companion
-                    Site
-                </a> and it'll send a push message for you, using the application
-                server keys on the site - so make sure they match.
-            </p>
-            <pre><code class="js-subscription-json"></code></pre>
-        </section>
-    </main>
+            
+            <div class="loggedOutuser">
+                <a href="#" class="nav-link">
+                    <span class="fa-icon">
+                        <img src="images/icons/fontawesome/user-plus.svg" />
+                    </span>Sign Up
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="fa-icon">
+                        <img src="images/icons/fontawesome/sign-in-alt.svg" />
+                    </span>Login
+                </a>
+            </div>
+            <div>
+                <a href="#" class="nav-link">
+                    <span class="fa-icon">
+                        <img src="images/icons/fontawesome/shopping-cart.svg" />
+                    </span> <span> My Cart</span>
+                </a>
+            </div>
+        </form>
+    </nav>
+
+    <div class="ebBody ebWrapper">
+        <div class="main-content ebWrapper">
+            <div class="ebusiness-body">
+                <div class="ebusiness-home">
+                    <div class="ebusiness-main-container">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                                <li data-target="#demo" data-slide-to="3"></li>
+                            </ul>
+
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/Slider1.jpg" alt="Meeting" width="1240" height="600" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Slider2.jpg" alt="Corporate Event" width="1240" height="600" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Slider3.jpg" alt="Meeting" width="1240" height="600" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Slider4.jpg" alt="Corporate Event" width="1240" height="600" />
+                                </div>
+                            </div>
+
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="ebFooter">
         <div class="ebusiness-main-container">
             e-Business 6.0  by Aptify (Part of the Community Brands family)
         </div>
     </div>
-
-    <script src="scripts/main.js"></script>
-
-    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 </body>
 </html>
