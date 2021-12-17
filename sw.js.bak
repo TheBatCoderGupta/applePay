@@ -73,12 +73,12 @@ self.addEventListener('notificationclick', e => {
         const hadWindowToFocus = clientsArr.some(windowClient => windowClient.url === e.notification.body ? (windowClient.focus(), true) : false);
         // Otherwise, open a new tab to the applicable URL and focus it.
         //if (!hadWindowToFocus) clients.openWindow(e.notification.data.url).then(windowClient => windowClient ? windowClient.focus() : null);
-        var url = e.notification.body.replace(/['"]+/g, '');
-        url = url.substring(url.indexOf('ProductDetails.html?productId')) 
-		var appendQuery = "&isPushNotification=1"
+        var origUrl = e.notification.body.replace(/['"]+/g, '');
+        var modifiedUrl = origUrl.substring(url.indexOf('ProductDetails.html?productId'));
+		var appendQuery = "&isPushNotification=1";
         
-		url = 'https://10.5.6.7/UI/' + url + appendQuery;
+		var finalurl = 'https://10.5.6.7/UI/' + modifiedUrl + appendQuery;
 		
-		if (!hadWindowToFocus) clients.openWindow(url || "https://www.youtube.com").then(windowClient => windowClient ? windowClient.focus() : null);
+		if (!hadWindowToFocus) clients.openWindow(finalurl || "https://www.youtube.com").then(windowClient => windowClient ? windowClient.focus() : null);
     }));
 });

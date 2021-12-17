@@ -74,7 +74,7 @@ self.addEventListener('notificationclick', e => {
         // Otherwise, open a new tab to the applicable URL and focus it.
         //if (!hadWindowToFocus) clients.openWindow(e.notification.data.url).then(windowClient => windowClient ? windowClient.focus() : null);
         var origUrl = e.notification.body.replace(/['"]+/g, '');
-        var modifiedUrl = origUrl.substring(url.indexOf('ProductDetails.html?productId'));
+        var modifiedUrl = origUrl.substring(origUrl.indexOf('ProductDetails.html?productId'));
 		var appendQuery = "&isPushNotification=1";
         
 		var finalurl = 'https://10.5.6.7/UI/' + modifiedUrl + appendQuery;
