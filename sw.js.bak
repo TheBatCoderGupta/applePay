@@ -27,7 +27,7 @@ self.addEventListener('push', function (event) {
 
     var pushMessage = `"${event.data.text()}"`;
 
-    const title = 'Push Codelab';
+    const title = 'eBusiness 6';
     //const options = {
     //    //   body: 'Yay it works.',
     //    body: pushMessage,
@@ -40,20 +40,26 @@ self.addEventListener('push', function (event) {
         "icon": "images/icon.png",
         "badge": 'images/badge.png',
         "vibrate": [200, 100, 200, 100, 200, 100, 400],
-        "tag": "request",
+        //"tag": "request",
+        "tag": 'renotify',
+        "renotify": true,
         "actions": [
             { "action": "yes", "title": "Yes", "icon": "images/yes.png" },
             { "action": "no", "title": "No", "icon": "images/no.png" }
         ]
     }
 
-    var notificationPromise = self.registration.showNotification(title, options);
-    notificationPromise.onclick = function (event) {
-        event.preventDefault(); // prevent the browser from focusing the Notification's tab
-        window.open('http://www.mozilla.org', '_blank');
-    }
+    //var notificationPromise = self.registration.showNotification(title, options);
+    //notificationPromise.onclick = function (event) {
+    //    event.preventDefault(); // prevent the browser from focusing the Notification's tab
+    //    window.open('http://www.mozilla.org', '_blank');
+    //}
 
-    event.waitUntil(notificationPromise);
+    //event.waitUntil(notificationPromise);
+
+    event.waitUntil(
+        self.registration.showNotification(title, options)
+    );
 });
 
 // Notification click event listener
@@ -67,9 +73,8 @@ self.addEventListener('notificationclick', e => {
         const hadWindowToFocus = clientsArr.some(windowClient => windowClient.url === e.notification.body ? (windowClient.focus(), true) : false);
         // Otherwise, open a new tab to the applicable URL and focus it.
         //if (!hadWindowToFocus) clients.openWindow(e.notification.data.url).then(windowClient => windowClient ? windowClient.focus() : null);
-        var url = e.notification.body.replace(/['"]+/g, '') ;
-        url = url.substring(url.indexOf('ProductDetails.html?productId'), url.length - 1) + "&isPushNotification=1";
-		url = 'https://azudevapt100002.aptifydev.com/UI/' + url;
+        var url = e.notification.body.replace(/['"]+/g, '');
+        url = url.substring(url.indexOf('ProductDetails.html?productId'), url.length - 1) + "&isPushNotification=1"
         if (!hadWindowToFocus) clients.openWindow(url || "https://www.youtube.com").then(windowClient => windowClient ? windowClient.focus() : null);
     }));
 });
