@@ -104,7 +104,7 @@ function updateSubscriptionOnServer(subscription) {
         };
 
         $.ajax({
-            url: 'https://10.5.6.7/SOA/v1/addPushSubscription',
+            url: '',
             type: "POST",
             data: dataToSend,
             success: function () {

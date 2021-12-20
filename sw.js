@@ -77,7 +77,7 @@ self.addEventListener('notificationclick', e => {
         var modifiedUrl = origUrl.substring(origUrl.indexOf('ProductDetails.html?productId'));
 		var appendQuery = "&isPushNotification=1";
         
-		var finalurl = 'https://10.5.6.7/UI/' + modifiedUrl + appendQuery;
+		var finalurl = 'https://' + modifiedUrl + appendQuery;
 		
 		if (!hadWindowToFocus) clients.openWindow(finalurl || "https://www.youtube.com").then(windowClient => windowClient ? windowClient.focus() : null);
     }));
