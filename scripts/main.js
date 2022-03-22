@@ -104,7 +104,7 @@ function updateSubscriptionOnServer(subscription) {
         };
 
         $.ajax({
-            url: 'http://azudevapt200004.aptifydev.com/SOA/v1/addPushSubscription',
+            url: 'https://azudevapt200004.aptifydev.com/SOA/v1/addPushSubscription',
             type: "POST",
             data: dataToSend,
             success: function () {
