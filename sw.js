@@ -75,11 +75,11 @@ self.addEventListener('notificationclick', e => {
         //if (!hadWindowToFocus) clients.openWindow(e.notification.data.url).then(windowClient => windowClient ? windowClient.focus() : null);
         // var origUrl = e.notification.body.replace(/['"]+/g, '');
         // var modifiedUrl = origUrl.substring(origUrl.indexOf('ProductDetails.html?productId'));
-        var productDetailsURL = e.notification.body.match(/(https?:\/\/[^ ]*)/)[1];
+        var productDetailsURL = e.notification.body.match(/(https?:\/\/[^ ]*)/)[1].replace(/['"]+/g, '');
 		var appendQuery = "&isPushNotification=1";
         
 		// var finalurl = 'https://' + modifiedUrl + appendQuery;
-		var finalurl = 'https://' + productDetailsURL + appendQuery;
+		var finalurl = productDetailsURL + appendQuery;
 		
 		if (!hadWindowToFocus) clients.openWindow(finalurl || "https://thebatcodergupta.github.io/pushFrontend").then(windowClient => windowClient ? windowClient.focus() : null);
     }));
