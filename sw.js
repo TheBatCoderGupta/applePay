@@ -73,12 +73,14 @@ self.addEventListener('notificationclick', e => {
         const hadWindowToFocus = clientsArr.some(windowClient => windowClient.url === e.notification.body ? (windowClient.focus(), true) : false);
         // Otherwise, open a new tab to the applicable URL and focus it.
         //if (!hadWindowToFocus) clients.openWindow(e.notification.data.url).then(windowClient => windowClient ? windowClient.focus() : null);
-        var origUrl = e.notification.body.replace(/['"]+/g, '');
-        var modifiedUrl = origUrl.substring(origUrl.indexOf('ProductDetails.html?productId'));
+        // var origUrl = e.notification.body.replace(/['"]+/g, '');
+        // var modifiedUrl = origUrl.substring(origUrl.indexOf('ProductDetails.html?productId'));
+        var productDetailsURL = e.notification.body.match(/(https?:\/\/[^ ]*)/)[1];
 		var appendQuery = "&isPushNotification=1";
         
-		var finalurl = 'https://' + modifiedUrl + appendQuery;
+		// var finalurl = 'https://' + modifiedUrl + appendQuery;
+		var finalurl = 'https://' + productDetailsURL + appendQuery;
 		
-		if (!hadWindowToFocus) clients.openWindow(finalurl || "https://www.youtube.com").then(windowClient => windowClient ? windowClient.focus() : null);
+		if (!hadWindowToFocus) clients.openWindow(finalurl || "https://thebatcodergupta.github.io/pushFrontend").then(windowClient => windowClient ? windowClient.focus() : null);
     }));
 });
