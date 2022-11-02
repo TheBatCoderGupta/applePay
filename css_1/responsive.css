@@ -1,0 +1,283 @@
+﻿@charset "utf-8";
+
+
+
+@media screen and (max-width: 1360px) {
+    .eb-balance-amt-label {
+        padding: 0
+    }
+
+    .eb-amount-Balance, .eb-amount-clm {
+        padding-right: 5px
+    }
+
+    .ebusiness-profile-tab-style a {
+        display: inline-block;
+        padding: 7px 12px
+    }
+}
+@media screen and (min-width:768px)and (max-width:1023px) {
+    .eb-events-see-details {
+        padding: 0;
+    }
+    .eb-amount-Balance, .eb-amount-clm {
+        text-align: left
+    }
+    .eb-tabs-events {
+        display: block;
+    }
+    .ebusiness-registered .btn {
+        min-width: 110px;
+    }
+        .eb-tabs-events .ebusiness-clientside-generic-search-animated[type=text], .ebClient-search-event[type=text], .ebClient-search-event-calendar[type=text] {
+        max-width: 270px;
+    }
+
+        .eb-tabs-events .ebusiness-view-switcher {
+            position: relative;
+            right: 0;
+            text-align: left;
+            line-height: 34px;
+            max-width: 100%;
+            padding: 0;
+        }
+
+        .eb-tabs-events .col-md-4.eb-active-tabs {
+            max-width: 100%;
+            padding: 10px 0 0 0;
+        }
+
+}
+    @media screen and (min-width:991px)and (max-width:1024px) {
+        .fixedPanelpayment {
+            position: fixed;
+            max-width: 301px;
+            top: 10px;
+            width: 100%;
+        }
+
+        .fixedPanelEvent {
+            position: fixed;
+            max-width: 301px;
+            top: 18px;
+            width: 100%;
+        }
+
+        .eb-registration-btn .btn {
+            padding: 0 45px;
+            height: 50px;
+            white-space: normal;
+        }
+        .eb-tabs-events .ebusiness-clientside-generic-search-animated[type=text], .ebClient-search-event[type=text], .ebClient-search-event-calendar[type=text] {
+            max-width: 240px;
+        }
+
+    }
+@media screen and (min-width:1024px) and (max-width:1360px) {
+    .hideoniPad {
+        display: none;
+    }
+
+    .visbleoniPad {
+        display: block;
+    }
+
+}
+    @media screen and (min-width:1025px) {
+      
+        .fixedPanelpayment {
+            position: fixed;
+            max-width: 376px;
+            top: 10px;
+            width: 100%;
+        }
+
+        .ebusiness-ui-payment-summary .fixedPanelpayment {
+            width: 100%;
+        }
+
+        .fixedPanelEvent {
+            position: fixed;
+            max-width: 376px;
+            top: 18px;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        .eb-order-history .isFilterClosed {
+            display: none;
+        }
+
+        .eb-registration-btn .btn {
+            padding: 0 5px;
+            height: 50px;
+            white-space: normal;
+        }
+
+        .eb-add-member-grid-row .eb-act-btn {
+            padding: 5px;
+        }
+
+        .eb-center-date {
+            text-align: left;
+        }
+
+        .eb-payoff-row {
+            line-height: 18px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .ebusiness-view-switcher{
+            right:0;
+        }
+        .ebWrapper {
+            min-height: inherit;
+        }
+        .eb-tabs-events {
+            display: block;
+        }
+
+            .eb-tabs-events .ebusiness-view-switcher {
+                position: relative;
+                right: 0;
+                text-align: left;
+                line-height: 34px;
+                max-width: 100%;
+                padding: 10px 0;
+            }
+
+        .col-md-4.eb-active-tabs {
+            padding-top: 0;
+        }
+
+        .eb-add-member-grid-row .eb-act-btn {
+            padding: 15px;
+        }
+
+        .eb-Payamount {
+            padding: 10px;
+        }
+
+        .btnSelect .btn {
+            margin: 5px 0;
+            width: 100%;
+        }
+
+        .label-orders {
+            display: block;
+        }
+
+        .eb-menu-label {
+            display: none
+        }
+
+        .ebusiness-profile-tab-style a {
+            display: inline-block;
+            padding: 7px 22px
+        }
+
+        .isFilterClosed {
+            display: none
+        }
+
+
+        .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+            color: #fff
+        }
+
+        .ebusiness-clientside-generic-search-animated[type=text] {
+            width: calc(100% - 48px)
+        }
+
+        .btnAddDelete {
+            padding: 6px 0 0 59px
+        }
+
+        .makePaymentHeadingPanel {
+            line-height: 18px
+        }
+
+        .eb-amount-Balance, .eb-amount-clm {
+            text-align: left
+        }
+
+        #eb-take-to-payment-control {
+            right: 0
+        }
+
+        .eb-dashboard-btns {
+            margin: 0 -15px
+        }
+
+        .ebusiness-productCatalog-pagination ul, .productCatlogPager ul {
+            display: block
+        }
+
+        .eb-center-date {
+            text-align: left;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .makePaymentHeadingPanel {
+            line-height: 18px
+        }
+
+        .eb-amount-Balance, .eb-amount-clm {
+            text-align: left
+        }
+
+        .eBiz-boundcontrol-personTopics .toi.section-wrapper.k-treeview > .k-group > .k-item {
+            width: 100%
+        }
+
+        .stepsText {
+            display: inline-block;
+            text-align: center;
+            padding: 0 5px 0 0
+        }
+
+        .btnAddDelete {
+            padding: 5px 0 0 5px;
+            text-align: left
+        }
+
+        .btnSelect button {
+            width: 100%;
+            margin-top: 10px
+        }
+
+        .ebClient-search-event[type=text] {
+            width: calc(100% - 192px)
+        }
+
+        .ebClient-search-event-calendar[type=text] {
+            width: calc(100% - 146px)
+        }
+
+
+
+        #eb-take-to-payment-control {
+            right: 0
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .makePaymentHeadingPanel {
+            line-height: 18px
+        }
+
+        .eb-amount-Balance, .eb-amount-clm {
+            text-align: left
+        }
+
+        .ebusiness-main-container {
+            zoom: .8
+        }
+
+        #eb-take-to-payment-control {
+            right: 0
+        }
+    }
