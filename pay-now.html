@@ -62,18 +62,19 @@
                    </div>
                </div>
 
+               <!-- Description -->
                <div class="row">
                    <div class="col-md-12">
                        <div class="about_box ">
-                           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of </p>
+                           <p>Please enter your Name, Email and select an option to Pay</p>
                        </div>
-
                    </div>
                </div>
+
                <div class="row">
                    <div class="col-md-12">
                        <div class="form-wrapper">
-                           <form class="main_form">
+                           <form class="main_form" method="get" action="https://buy.stripe.com/test_7sI4gi41N3b05H29AD">
                                <div class="row">
                                    <div class="col-md-6 ">
                                        <input class="form_contril" placeholder="First Name " type="text" name="First Name" required>
@@ -84,9 +85,11 @@
                                    <div class="col-md-12">
                                        <input class="form_contril" placeholder="Email" type="text" name="Email" required>
                                    </div>
-                                   <div class="col-sm-12">
+                                   <!--<div class="col-sm-12">
                                        <a class="send_btn" href="https://buy.stripe.com/test_7sI4gi41N3b05H29AD">Pay Now</a>
-                                   </div>
+                                   </div>-->
+                                   <input type="submit" value="Pay Now" class="send_btn w-button">
+                                   <figure><img src="images/QRCode.png" alt="#" /></figure>
                                </div>
                            </form>
                        </div>
@@ -100,6 +103,7 @@
        <script src="js/jquery.min.js"></script>
        <script src="js/bootstrap.bundle.min.js"></script>
        <script src="js/custom.js"></script>
+
    </body>
 </html>
 
